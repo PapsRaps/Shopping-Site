@@ -1,0 +1,94 @@
+.header{
+    width: 100%;
+    background-color: var(--main-background-color);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header h1{
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--main-text-color);
+
+    text-transform: uppercase;
+
+}
+
+.headerLinks{
+    display: flex;
+    gap: 28px;
+}
+
+.headerLinks a{
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--secondary-text-color);
+
+    text-transform: uppercase;
+    position: relative
+}
+
+.headerLinks a:hover, .headerLinks a:active{
+    color: var(--main-text-color);
+}
+
+.headerLinks a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    border-top: 3px solid var(--nav-bar-underline-color);
+    bottom: -5px;
+    left: 0;
+
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.35s ease-in-out;
+}
+
+.headerLinks a:hover::after,
+.headerLinks a:active::after {
+    transform: scaleX(1);
+}
+
+button.headerCart{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+.headerCart svg{
+    color: var(--icon-color);
+}
+
+.cartNotif{
+    font-size: 13px;
+    font-weight: 600;
+    background-color: var(--cart-notif-background-color);
+    color: var(--cart-notif-text-color);
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -10px;
+    right: -15px;
+}

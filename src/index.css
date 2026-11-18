@@ -1,26 +1,26 @@
 :root{
-    --main-background-color: #fcf9f4;
-    --secondary-background-color: #f6f3ee;
-    --third-background-color: white;
+  --main-background-color: #fcf9f4;
+  --secondary-background-color: #f6f3ee;
+  --third-background-color: white;
 
-    --main-text-color: #1c1a17;
-    --secondary-text-color: #737069;
-    --third-text-color: #8a877f;
-    --accent-text-color: #c86446;
+  --main-text-color: #1c1a17;
+  --secondary-text-color: #575550;
+  --third-text-color: #8a877f;
+  --accent-text-color: #c86446;
 
-    --icon-color: #1c1a17;
+  --icon-color: #1c1a17;
 
-    --border-color: #e8e4dc;
-    --focus-color: #1c1a17;
+  --border-color: #e8e4dc;
+  --focus-color: #1c1a17;
 
-    --button-background-color: #1c1a17;
-    --button-text-color: white;
-    --button-hover-color: #322f2b;
+  --button-background-color: #1c1a17;
+  --button-text-color: white;
+  --button-hover-color: #322f2b;
 
-    --cart-notif-background-color: #c86446;
-    --cart-notif-text-color: white;
+  --cart-notif-background-color: #A23E18;
+  --cart-notif-text-color: white;
 
-    --nav-bar-underline-color: #c86446;
+  --nav-bar-underline-color: #c86446;
 }
 
 .hanken-grotesk {
@@ -44,6 +44,22 @@ p {
   margin: 0;
 }
 
+#root{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-background-color);
+}
+
 body{
-    font-family: "Hanken Grotesk", sans-serif;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px; 
+  padding-right: 24px;
 }
