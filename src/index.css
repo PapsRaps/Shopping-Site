@@ -1,0 +1,49 @@
+:root{
+    --main-background-color: #fcf9f4;
+    --secondary-background-color: #f6f3ee;
+    --third-background-color: white;
+
+    --main-text-color: #1c1a17;
+    --secondary-text-color: #737069;
+    --third-text-color: #8a877f;
+    --accent-text-color: #c86446;
+
+    --icon-color: #1c1a17;
+
+    --border-color: #e8e4dc;
+    --focus-color: #1c1a17;
+
+    --button-background-color: #1c1a17;
+    --button-text-color: white;
+    --button-hover-color: #322f2b;
+
+    --cart-notif-background-color: #c86446;
+    --cart-notif-text-color: white;
+
+    --nav-bar-underline-color: #c86446;
+}
+
+.hanken-grotesk {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+body{
+    font-family: "Hanken Grotesk", sans-serif;
+}
