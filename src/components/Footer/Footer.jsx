@@ -7,7 +7,7 @@ export default function Footer(){
                 <div className={styles.footerLeft}>
                     <h3>Bibili</h3>
                     <div className={styles.footerTextBorder}>—</div>
-                    <div className={styles.footerDesc}>Bumili ka na.</div>
+                    <div className={styles.footerDesc}>Bumili ka.</div>
                 </div>
                 <div className={styles.footerRight}>
                     <nav className={styles.footerLinks}>
@@ -16,7 +16,7 @@ export default function Footer(){
                         <a href=''>Cart</a>
                     </nav>
                     <div className={styles.footerTextBorder}>|</div>
-                    <div className={styles.footerDesc}>© 2024 Bibili Na Ako Co. All rights reserved.</div>
+                    <div className={styles.footerDesc}>© 2026 Bibili Na Ako Co. All rights reserved.</div>
                 </div>
             </div>
         </footer>

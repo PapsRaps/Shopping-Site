@@ -14,7 +14,7 @@
 
 .homeEyebrow{
     font-size: 0.75rem;
-    font-weight: 600;
+    font-weight: bold;
     text-transform: uppercase;
     color: var(--accent-text-color);
     letter-spacing: 0.15rem;
@@ -57,4 +57,26 @@
     border-radius: 5%;
     object-fit: cover;
     object-position: center;
+}
+
+@media (max-width: 1024px) {
+    .homeContent{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        margin: 50px 0;
+        align-items: start;
+    }
+
+    .homeLeft{
+        max-width: 600px;
+    }
+
+    .homeRight{
+        width: 100%;
+    }
+
+    .homeRight img{
+        height: 360px;
+    }
 }

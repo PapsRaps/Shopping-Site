@@ -9,6 +9,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 48px 20px;
+    gap: 50px
 }
 
 .footerLeft, .footerRight{
@@ -47,4 +48,21 @@
 
 .footerLinks a:hover{
     color: var(--main-text-color);
+}
+
+@media (max-width: 900px) {
+    .footerContainer{
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 650px) {
+    .footerLeft, .footerRight{
+        flex-direction: column;
+    }
+
+    .footerTextBorder{
+        display: none;
+    }
 }
