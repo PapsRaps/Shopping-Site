@@ -1,16 +1,38 @@
-# React + Vite
+# Shopping Cart
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A simple shopping website built with React that allows users to browse products, add items to their shopping cart, and manage their selected items.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Home Page**
+  - Landing page introducing the shopping website.
+  - Navigation to the shop and cart pages.
 
-## React Compiler
+- **Shop Page**
+  - Display a list of products fetched from the Fake Store API.
+  - View product information such as name, image, price, and description.
+  - Add products to the shopping cart.
+  - Adjust the quantity of items before adding them to the cart.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Shopping Cart**
+  - View all added products.
+  - Increase or decrease item quantities.
+  - Remove items from the cart.
+  - Display the total price of selected items.
 
-## Expanding the Oxlint configuration
+- **Navigation**
+  - Navigate between the Home, Shop, and Cart pages.
+  - Display the current number of items in the cart.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Technologies Used
+
+- React
+- JavaScript
+- HTML5
+- CSS3
+- Fake Store API
+- React Router
+
+## API
+
+This project uses the [Fake Store API](https://fakestoreapi.com/) to retrieve product information displayed in the shop.
