@@ -65,4 +65,8 @@
     .footerTextBorder{
         display: none;
     }
+
+    .footerDesc{
+        text-align: center;
+    }
 }

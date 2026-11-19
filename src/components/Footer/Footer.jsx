@@ -7,7 +7,7 @@ export default function Footer(){
                 <div className={styles.footerLeft}>
                     <h3>Bibili</h3>
                     <div className={styles.footerTextBorder}>—</div>
-                    <div className={styles.footerDesc}>Bumili ka.</div>
+                    <div className={styles.footerDesc}>Bumili ka na.</div>
                 </div>
                 <div className={styles.footerRight}>
                     <nav className={styles.footerLinks}>
