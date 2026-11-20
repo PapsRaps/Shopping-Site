@@ -1,0 +1,225 @@
+.cart{
+    display: flex;
+    gap: 50px;
+    margin-bottom: 70px;
+}
+
+.cartList{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+    flex: 1 1 auto;
+}
+
+.cartCard{
+    display: flex;
+    gap: 20px;
+
+    padding: 20px;
+
+    background-color: var(--third-background-color);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: rgba(0, 0, 0, 0.15) 1px 1px 2px;
+}
+
+.productImage img{
+    width: 170px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.productDesc{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    padding: 20px;
+}
+
+.productNameAndCat{
+    grid-column: span 2;
+    grid-row: 1;
+}
+
+.productSetQuantity{
+    grid-column: 1;
+    grid-row: 2;
+
+    align-self: flex-end;
+}
+
+.productDelete{
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+}
+
+button.productDelete{
+    height: fit-content;
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+}
+
+.productDelete svg{
+    transition: transform 0.35s;
+}
+
+.productDelete:hover svg{
+    transform: rotateZ(25deg);
+}
+
+.productPrice{
+    grid-column: span 2;
+    grid-row: 2;
+
+    align-self: flex-end;
+    justify-self: end;
+    text-align: end;
+}
+
+.productEachPrice{
+    color: var(--secondary-text-color);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.productTotalPrice{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--main-text-color);
+}
+
+.productName{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--main-text-color);
+}
+
+.productCategory{
+    color: var(--secondary-text-color);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.productSetQuantity{
+    display: flex;
+}
+
+.productSetQuantity input::-webkit-outer-spin-button,.productSetQuantity input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.productSetQuantity input{
+    -moz-appearance: textfield;
+    appearance: textfield;
+
+    width: 50px;
+    padding: 4px;
+    text-align: center;
+}
+
+.productSetQuantity input, .productSetQuantity button{
+    background-color: var(--secondary-background-color);
+    border: 1px solid var(--border-color);
+    color: var(--main-text-color);
+    font-size: 0.9rem;
+}
+
+.productSetQuantity button{
+    cursor: pointer;
+    padding: 6px 10px;
+}
+
+
+.totalContainer{
+    
+    flex: 1 1 auto;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 30px;
+
+    background-color: var(--third-background-color);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: rgba(0, 0, 0, 0.15) 1px 1px 2px;
+}
+
+.totalContainer h4{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--main-text-color);
+}
+
+.totalContainer hr{
+    width: 100%;
+    color: var(--border-color);
+}
+
+.total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--main-text-color);
+}
+
+.total .totalPrice{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--main-text-color);
+}
+
+.checkOutButton{
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 1220px) {
+    .cart{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 810px) {
+    .cartCard{
+        flex-direction: column;
+    }
+    
+    .productImage img{
+        width: 100%;
+    }
+
+    .productDesc{
+        padding: 0;
+    }
+}
+
+
