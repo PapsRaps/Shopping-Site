@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <Cart></Cart>
+      <Shop></Shop>
     </>
   )
 }
