@@ -1,6 +1,9 @@
 import styles from './EmptyShop.module.css'
+import { useNavigate } from "react-router"
 
 export default function EmptyShop(){
+    const navigate = useNavigate();
+
     return(
         <div className={`container ${styles.emptyShopContent}`}>
             <div className={styles.errorScreen}>
@@ -10,7 +13,7 @@ export default function EmptyShop(){
                 <h3>Connection Issue</h3>
                 <h2>Unable to load products</h2>
                 <p>Please check your internet or try again.</p>
-                <button className={styles.returnButton}>
+                <button className={styles.returnButton} onClick={()=>navigate('/')}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-left preview-icon"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
                     Return to homepage
                 </button>

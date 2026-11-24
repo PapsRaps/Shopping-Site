@@ -1,6 +1,9 @@
 import styles from './EmptyCart.module.css'
+import { useNavigate } from "react-router"
 
 export default function EmptyCart(){
+    const navigate = useNavigate();
+
     return(
         <div className={`container ${styles.emptyCartContent}`}>
             <div className={styles.logoDisplay}>
@@ -8,7 +11,7 @@ export default function EmptyCart(){
             </div>
             <h2>Your cart is empty</h2>
             <p>Looks like you haven't added any essentials to your cart yet.</p>
-            <button className={styles.startShoppingButton}>
+            <button className={styles.startShoppingButton} onClick={()=>navigate('/shop')}>
                 Start Shopping
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right preview-icon"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </button>
