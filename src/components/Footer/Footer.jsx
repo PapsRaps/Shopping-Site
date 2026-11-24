@@ -1,4 +1,5 @@
 import styles from './Footer.module.css'
+import { Link } from "react-router"
 
 export default function Footer(){
     return(
@@ -11,9 +12,9 @@ export default function Footer(){
                 </div>
                 <div className={styles.footerRight}>
                     <nav className={styles.footerLinks}>
-                        <a href=''>Home</a>
-                        <a href=''>Shop</a>
-                        <a href=''>Cart</a>
+                        <Link to={'/'}>Home</Link>
+                        <Link to={'/shop'}>Shop</Link>
+                        <Link to={'/cart'}>Cart</Link>
                     </nav>
                     <div className={styles.footerTextBorder}>|</div>
                     <div className={styles.footerDesc}>© 2026 Bibili Na Ako Co. All rights reserved.</div>

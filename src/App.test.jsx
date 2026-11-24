@@ -40,4 +40,16 @@ describe('App routing', () => {
       screen.getByRole('heading', { name: 'Your cart is empty' })
     ).toBeInTheDocument();
   });
+
+  it('Visiting a wrong URL renders the NotFound Page', () => {
+    const router = createMemoryRouter(routes, {
+      initialEntries: ['/dddddddddsdsdaaaaaaa']
+    });
+
+    render(<RouterProvider router={router} />);
+
+    expect(
+      screen.getByRole('heading', { name: "We couldn't find the page you're looking for." })
+    ).toBeInTheDocument();
+  });
 });

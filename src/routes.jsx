@@ -6,7 +6,7 @@ import NotFound from './pages/NotFound/NotFound'
 const routes = [
   {
     path: '/',
-    element: <NotFound />
+    element: <Home />
   },
   {
     path: '/shop',
@@ -15,6 +15,10 @@ const routes = [
   {
     path: '/cart',
     element: <Cart />
+  },
+  {
+    path: '*',
+    element: <NotFound />
   }
 ]
 
