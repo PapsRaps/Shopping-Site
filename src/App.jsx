@@ -1,13 +1,11 @@
-import Home from './pages/Home/Home'
-import Shop from './pages/Shop/Shop'
-import Cart from './pages/Cart/Cart'
+import routes from './routes'
+import { RouterProvider, createBrowserRouter } from "react-router"
+
+const router = createBrowserRouter(routes)
 
 function App() {
-
   return (
-    <>
-      <Shop></Shop>
-    </>
+    <RouterProvider router={router} />
   )
 }
 
