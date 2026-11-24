@@ -1,0 +1,68 @@
+.notFoundContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    flex: 1 1 auto;
+
+    padding: 50px;
+}
+
+.errorNum{
+    color: var(--error-color);
+    font-weight: bold;
+    font-size: 10rem;
+}
+
+.errorDesc{
+    text-transform: uppercase;
+    color: var(--error-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.notFoundContent h2{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--main-text-color);
+    text-align: center;
+}
+
+.notFoundContent p{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--secondary-text-color);
+    text-align: center;
+}
+
+.returnButton{
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    width: fit-content;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.returnButton:hover{
+    background-color: var(--button-hover-color);
+}
+
+@media (max-width: 768px) {
+    .errorNum{
+        font-size: 5rem;
+    }
+}

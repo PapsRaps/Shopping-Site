@@ -1,11 +1,12 @@
 import Home from './pages/Home/Home'
 import Shop from './pages/Shop/Shop'
 import Cart from './pages/Cart/Cart'
+import NotFound from './pages/NotFound/NotFound'
 
 const routes = [
   {
     path: '/',
-    element: <Home />
+    element: <NotFound />
   },
   {
     path: '/shop',
