@@ -1,0 +1,104 @@
+.loadingListContainer {
+    flex: 1 1 auto;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+
+.skeletonGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.skeletonCard {
+    background-color: var(--third-background-color);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.skeletonPulse {
+    background-color: var(--border-color);
+    opacity: 0.6;
+    animation: pulsing 1.5s ease-in-out infinite;
+}
+
+@keyframes pulsing {
+    0% {
+        opacity: 0.45;
+    }
+    50% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 0.45;
+    }
+}
+
+.skeletonImage {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cardDetails {
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.skeletonTag {
+    width: 70px;
+    height: 14px;
+    border-radius: 4px;
+}
+
+.skeletonTitle {
+    width: 85%;
+    height: 22px;
+    border-radius: 4px;
+}
+
+.skeletonDesc {
+    width: 60%;
+    height: 14px;
+    border-radius: 4px;
+}
+
+.cardFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border-color);
+}
+
+.skeletonPrice {
+    width: 60px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.skeletonButton {
+    width: 90px;
+    height: 36px;
+    border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+    .skeletonGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 580px) {
+    .skeletonGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

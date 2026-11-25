@@ -10,7 +10,7 @@ describe('Home Button', () => {
         const user = userEvent.setup();
 
         const router = createMemoryRouter(routes, {
-        initialEntries: ['/']
+            initialEntries: ['/']
         });
 
         render(<RouterProvider router={router} />);
