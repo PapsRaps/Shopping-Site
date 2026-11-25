@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import userEvent from "@testing-library/user-event";
 
@@ -7,6 +7,12 @@ import { createMemoryRouter, RouterProvider } from 'react-router';
 
 describe('Home Button', () => {
     it('Clicking return button renders the Home Page', async () => {
+        globalThis.fetch = vi.fn();
+
+        globalThis.fetch.mockRejectedValue(
+            new TypeError('Failed to fetch')
+        );
+
         const user = userEvent.setup();
 
         const router = createMemoryRouter(routes, {
@@ -15,7 +21,7 @@ describe('Home Button', () => {
 
         render(<RouterProvider router={router} />);
         
-        const homeButton = screen.getByRole('button', { name: /return to homepage/i});
+        const homeButton = await screen.findByRole('button', { name: /return to homepage/i});
 
         await user.click(homeButton);
 
