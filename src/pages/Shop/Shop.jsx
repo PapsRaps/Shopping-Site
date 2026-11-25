@@ -24,7 +24,13 @@ export default function Shop(){
                 }
 
                 const data = await response.json();
-                setItems(data)
+
+                const productsWithQuantity = data.map(item => ({
+                    ...item,
+                    stock: Math.floor(Math.random() * 15) + 1
+                }));
+
+                setItems(productsWithQuantity);
             }catch(error){
                 let msg = 'Unable to connect. Please check your internet connection.';
                 if (error.name === 'SyntaxError') {
