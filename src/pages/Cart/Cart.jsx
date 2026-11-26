@@ -8,7 +8,7 @@ import { useContext } from 'react';
 import ProductsContext from '../../context/ProductsContext';
 
 export default function Cart(){
-    const { cart, setCart } = useContext(ProductsContext);
+    const { cart } = useContext(ProductsContext);
 
     return(
         <div className={styles.cartScreen}>
@@ -19,7 +19,7 @@ export default function Cart(){
                     <div className={styles.cartHeader}>
                         <div className={styles.cartTitle}>
                             <h2>Shopping Cart</h2>
-                            <p>({cart.reduce((total, item) => total + item.quantity, 0)} items in cart)</p>
+                            <div className={styles.cartTotal}>({cart.reduce((total, item) => total + item.quantity, 0)} items in cart)</div>
                         </div>
                     </div>
                     <CartList></CartList>

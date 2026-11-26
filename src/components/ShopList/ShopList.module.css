@@ -104,6 +104,12 @@
 .productSetQuantity button{
     cursor: pointer;
     padding: 6px 10px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.productSetQuantity button:hover {
+    background-color: var(--cart-notif-background-color);
+    color: #ffffff;
 }
 
 
