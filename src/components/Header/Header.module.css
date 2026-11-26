@@ -70,23 +70,22 @@ button.headerCart{
     align-items: center;
 
     position: relative;
-    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .headerCart svg{
     color: var(--icon-color);
-    
+    transition: color 0.25s;
 }
 
-button.headerCart:hover{
-    transform: translateY(-3px);
+button.headerCart:hover svg{
+    color: var(--button-hover-color)
 }
 
 
 
 .cartNotif{
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: bold;
     background-color: var(--cart-notif-background-color);
     color: var(--cart-notif-text-color);
     width: 20px;
@@ -98,7 +97,29 @@ button.headerCart:hover{
     position: absolute;
     top: -10px;
     right: -15px;
+
+    animation: bounce 0.4s ease;
 }
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    35% {
+        transform: translateY(-5px);
+    }
+    65% {
+        transform: translateY(2px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
 
 @media (max-width: 425px) {
     .headerContainer{

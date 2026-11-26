@@ -1,7 +1,12 @@
 import styles from './Header.module.css'
 import { Link, useNavigate } from "react-router"
 
+import { useContext } from 'react';
+import ProductsContext from '../../context/ProductsContext';
+
 export default function Header(){
+    const { cart, cartButtonRef } = useContext(ProductsContext);
+
     const navigate = useNavigate();
 
     return(
@@ -13,9 +18,13 @@ export default function Header(){
                     <Link to="/shop">Shop</Link>
                     <Link to="/cart">Cart</Link>
                 </nav>
-                <button className={styles.headerCart} aria-label="Shopping cart" onClick={()=>navigate('/cart')}>
+                <button className={styles.headerCart} aria-label="Shopping cart" ref={cartButtonRef} onClick={()=>navigate('/cart')}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-shopping-basket preview-icon"><path d="m15 11-1 9"/><path d="m19 11-4-7"/><path d="M2 11h20"/><path d="m3.5 11 1.6 7.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6l1.7-7.4"/><path d="M4.5 15.5h15"/><path d="m5 11 4-7"/><path d="m9 11 1 9"/></svg>
-                    <div className={styles.cartNotif}>3</div>
+                    {cart.length > 0 && (
+                        <div key={cart.reduce((total, item) => total + item.quantity, 0)} className={styles.cartNotif}>
+                            {cart.length}
+                        </div>
+                    )}
                 </button>
             </div>
         </header>

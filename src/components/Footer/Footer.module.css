@@ -44,6 +44,7 @@
     color: var(--secondary-text-color);
 
     text-transform: uppercase;
+    transition: color 0.25s;
 }
 
 .footerLinks a:hover{
